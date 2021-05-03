@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height:100vh;
+}
+
+.container
+{
+  background-color: red;
+  width: 50vw;
+  height: 50vh;
+}
