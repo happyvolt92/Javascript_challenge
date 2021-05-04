@@ -1,4 +1,6 @@
 const container = document.querySelector(".container");
+const myname = document.getElementById("myname");
+const form = document.getElementById("formu");
 
 //changing color challenge//
 var count = 0;
@@ -26,8 +28,22 @@ function show_alert()
 } 
 
 //alert with strange characters//
-function show_alert() 
-{     
-  var name = document.getElementById('myname').value;
-  alert("utilisation de charactères spéciaux interdit ! ");
-} 
+let rule = /^[a-zA-Z]+$/;
+
+
+function letterrules() {
+    if ( myname.value.match(rule) )
+    { console.log("ok"); show_alert(); }
+    else {
+        console.log("notok");
+        myname.style.border = " solid red";
+    }
+
+}
+
+form.addEventListener("submit", function (e)
+{ e.preventDefault();
+    letterrules();
+    
+});
+
